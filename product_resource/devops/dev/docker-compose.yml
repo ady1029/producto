@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  product-resource-api:
+    image: product-resource-api
+    build:
+      context: .
+      args:
+        - SCENARIO=dev
+    network_mode: bridge
+    container_name: product-resource-api
