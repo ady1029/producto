@@ -1,0 +1,26 @@
+package cu.aica.product_resource.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class CorsConfig {
+
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**")
+                        .allowedOrigins("*")
+                        .allowedMethods("OPTIONS", "GET", "POST", "PATCH", "PUT", "DELETE")
+                        .allowedHeaders("*");
+//                        .allowedHeaders("Content-Type, X-Total-Count, Date")
+//                        .exposedHeaders("Content-Type, X-Total-Count, Date")
+//                        .allowCredentials(false).maxAge(3600);
+            }
+        };
+    }
+}

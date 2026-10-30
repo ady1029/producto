@@ -1,0 +1,1 @@
+ALTER TABLE "public"."product_family" RENAME COLUMN "nationalDemand" TO "national_demand";

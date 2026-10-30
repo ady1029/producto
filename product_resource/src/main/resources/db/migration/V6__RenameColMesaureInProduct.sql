@@ -1,0 +1,1 @@
+ALTER TABLE "public"."product" RENAME COLUMN "id_mesuare_unit" TO "id_measure_unit";

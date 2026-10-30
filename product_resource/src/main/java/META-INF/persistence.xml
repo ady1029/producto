@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>cu.aica.product_resource.models.MeasureUnit</class>
+        <class>cu.aica.product_resource.models.Product</class>
+        <class>cu.aica.product_resource.models.ProductFamily</class>
+        <class>cu.aica.product_resource.models.ProductRelation</class>
+        <class>cu.aica.product_resource.models.Relation</class>
+        <class>cu.aica.product_resource.models.Resource</class>
+        <class>cu.aica.product_resource.models.ResourceFamily</class>
+        <class>cu.aica.product_resource.models.ResourceRelation</class>
+        <class>cu.aica.product_resource.models.ResourceType</class>
+        <class>cu.aica.product_resource.test.FlywaySchemaHistory</class>
+        <class>cu.aica.product_resource.test.MeasureUnit</class>
+        <class>cu.aica.product_resource.test.Product</class>
+        <class>cu.aica.product_resource.test.ProductFamily</class>
+        <class>cu.aica.product_resource.test.ProductRelation</class>
+        <class>cu.aica.product_resource.test.Relation</class>
+        <class>cu.aica.product_resource.test.Resource</class>
+        <class>cu.aica.product_resource.test.ResourceFamily</class>
+        <class>cu.aica.product_resource.test.ResourceRelation</class>
+        <class>cu.aica.product_resource.test.ResourceType</class>
+        <class>cu.aica.product_resource.models.ResourceFamilyRelation</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5433/product_resource"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value=""/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
