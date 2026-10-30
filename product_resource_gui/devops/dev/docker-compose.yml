@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  product-resource-ui:
+    image: product-resource-ui
+    restart: always
+    build:
+      context: .
+    network_mode: bridge
+    container_name: product-resource-ui
+    ports:
+      - 8002:80
